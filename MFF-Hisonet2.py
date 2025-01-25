@@ -8,7 +8,7 @@ from src.losses.LossFunctions import HybridLoss
 from src.utils.Experiment import Experiment
 
 # Define a custom agent class for Bi-CBMSegNet
-class Agent_BiCBMSegNet:
+class Agent_Mff-histoNet:
     def __init__(self, model, optimizer, scheduler, config):
         self.model = model
         self.optimizer = optimizer
@@ -104,7 +104,7 @@ config = [{
 # Initialize dataset and model components
 dataset = Dataset_NiiGz_3D(config[0]['img_path'], config[0]['label_path'], slice=2, transform=None)  # Assuming 2D mammogram slices
 device = torch.device(config[0]['device'])
-model = BiCBMSegNet(config[0]['channel_n'], config[0]['input_channels'], config[0]['output_channels']).to(device)
+model = Mff-histoNet(config[0]['channel_n'], config[0]['input_channels'], config[0]['output_channels']).to(device)
 
 # Optimizer and Scheduler
 optimizer = SGD(model.parameters(), lr=config[0]['lr'], momentum=0.9, weight_decay=1e-4)
@@ -124,6 +124,4 @@ loss_function = HybridLoss(alpha=0.5, gamma=1.0)
 # Train the model
 agent.train(data_loader, loss_function)
 
-# Evaluate the model's Dice Score
-dice_score = agent.evaluate(data_loader, loss_function)
-print(f"Average Dice Score: {dice_score}")
+
