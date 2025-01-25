@@ -1,0 +1,11 @@
+#pip install -r requirements.txt 
+torch
+torchvision
+numpy
+matplotlib
+scikit-image
+scikit-learn
+opencv-python
+seaborn
+torchcam
+
