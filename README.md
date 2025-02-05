@@ -1,5 +1,10 @@
 # Breast_Cancer_Detection
 
+
+
+[![DOI](https://zenodo.org/badge/922145979.svg)](https://doi.org/10.5281/zenodo.14808037)
+
+
 ### PROJECT OVERVIEW:
 Breast Cancer Diagnosis with MFF-HistoNet: A Mul-ti-Modal Feature Fusion Network Integrating CNNs and Quantum Tensor Networks
 
